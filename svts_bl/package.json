@@ -1,0 +1,26 @@
+{
+  "name": "svts_bl",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "routify -c dev-vite",
+    "build": "routfiy -b & vite build",
+    "dev-vite": "vite",
+    "serve": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@roxi/routify": "^2.18.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "@tsconfig/svelte": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.38.0",
+    "svelte": "^3.37.0",
+    "svelte-check": "^2.1.0",
+    "svelte-hmr": "^0.14.7",
+    "svelte-preprocess": "^4.7.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  }
+}
