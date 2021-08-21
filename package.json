@@ -1,20 +1,31 @@
 {
-  "name": "svts_bl",
+  "name": "template-vite-routify-ts-smui",
   "version": "0.0.0",
-  "type": "module",
+  "author": "BF",
+  "repository": "https://github.com/SMEETT/template-vite-routify-ts-smui.git",
   "scripts": {
-    "dev": "routify -c dev-vite",
-    "build": "routfiy -b & vite build",
-    "dev-vite": "vite",
+    "dev": "routify -c __dev-vite",
+    "build": "routify -b & vite build",
     "serve": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "checkts": "svelte-check --tsconfig ./tsconfig.json",
+    "prepare": "npm run __vite-workaround && npm run __smui-theme-light && npm run __smui-theme-dark",
+    "__dev-vite": "vite",
+    "__vite-workaround": "node _helper/vite-workaround.js",
+    "__smui-theme-light": "smui-theme compile public/smui.css -i src/theme",
+    "__smui-theme-dark": "smui-theme compile public/smui-dark.css -i src/theme/dark"
   },
   "devDependencies": {
+    "@material/theme": "^11.0.0",
     "@roxi/routify": "^2.18.3",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
     "@tsconfig/svelte": "^2.0.1",
+    "autoprefixer": "^10.3.1",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "postcss-load-config": "^3.1.0",
     "sass": "^1.38.0",
+    "smui-theme": "^4.2.0",
     "svelte": "^3.37.0",
     "svelte-check": "^2.1.0",
     "svelte-hmr": "^0.14.7",
@@ -22,5 +33,12 @@
     "tslib": "^2.2.0",
     "typescript": "^4.3.2",
     "vite": "^2.4.4"
+  },
+  "dependencies": {
+    "@smui/button": "^4.2.0",
+    "@smui/checkbox": "^4.2.0",
+    "@smui/form-field": "^4.2.0",
+    "@smui/icon-button": "^4.2.0",
+    "@smui/top-app-bar": "^4.2.0"
   }
 }

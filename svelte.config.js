@@ -1,7 +1,13 @@
-import sveltePreprocess from 'svelte-preprocess'
+const preprocess = require("svelte-preprocess");
+// import preprocess from "svelte-preprocess";
 
-export default {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: sveltePreprocess()
-}
+module.exports = {
+	preprocess: [
+		preprocess({
+			postcss: import("./postcss.config.js"),
+			// scss: {
+			// 	includePaths: ["themes", "node_modules"],
+			// },
+		}),
+	],
+};

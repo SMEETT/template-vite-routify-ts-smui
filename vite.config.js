@@ -1,7 +1,6 @@
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { defineConfig } from "vite";
 import path from "path";
-const __dirname = path.resolve(path.dirname(""));
 
 export default defineConfig({
 	server: {
