@@ -1,8 +1,6 @@
 <script lang="ts">
 	let typescriptNumber: number = 10;
 	console.log("A TypeScript number:", typescriptNumber);
-	import Counter from "@/lib/Counter.svelte";
-
 	import { url } from "@roxi/routify";
 	console.log($url());
 
@@ -25,7 +23,9 @@
 		<a href="https://www.typescriptlang.org/" target="_blank"><img src="/images/logo_ts.png" alt="" /></a>
 		<a href="https://sveltematerialui.com/" target="_blank"><img src="/images/logo_md.png" alt="" /></a>
 	</div>
-	<div class="mdc-typography--body1" style="margin-bottom: 1rem">For more detailed information check <a href="/github">README</a></div>
+	<div class="mdc-typography--body1" style="margin-bottom: 1rem">
+		For more detailed information check<a href="https://github.com/SMEETT/template-vite-routify-ts-smui/blob/main/README.md">README</a>
+	</div>
 	<div class="saperator" />
 	<div class="wrapper-ui-elements">
 		<div class="top-app-bar-container" style="margin-bottom: 1rem">
