@@ -2,6 +2,12 @@
 
 This template is based on [Oxova's Svelte-Vite-Template](https://github.com/Oxova/svelte-vite-template). Thanks!
 
+## Introduction
+
+I am not an expert on Vite. If you see ways to improve this template please feel very welcome to contribute.
+
+The TypeScript support is limited. There are currently no Types installed for Routify or SMUI. I am just getting started with TS and have to investigate more. Any help much appreciated!
+
 ## Features
 
 -   Vite
@@ -24,12 +30,6 @@ npm install
 | serve   | serve build         |
 | check   | check for TS-errors |
 | prepare | build SMUI-Theme    |
-
-## Introduction
-
-I am not an expert on Vite. If you see ways to improve this template please feel very welcome to contribute.
-
-The TypeScript support is limited. There are currently no Types installed for Routify or SMUI. I am just getting started with TS and have to investigate more. Any help much appreciated!
 
 ## What Material Design Components are available?
 

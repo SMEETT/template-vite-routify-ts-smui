@@ -24,7 +24,7 @@
 		<a href="https://sveltematerialui.com/" target="_blank"><img src="/images/logo_md.png" alt="" /></a>
 	</div>
 	<div class="mdc-typography--body1" style="margin-bottom: 1rem">
-		For more detailed information check<a href="https://github.com/SMEETT/template-vite-routify-ts-smui/blob/main/README.md">README</a>
+		For more detailed information check <a href="https://github.com/SMEETT/template-vite-routify-ts-smui/blob/main/README.md">README</a>
 	</div>
 	<div class="saperator" />
 	<div class="wrapper-ui-elements">
