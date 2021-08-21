@@ -29,6 +29,8 @@ npm install
 
 I am not an expert on Vite. If you see ways to improve this template please feel very welcome to contribute.
 
+The TypeScript support is limited. There are currently no Types installed for Routify or SMUI. I am just getting started with TS and have to investigate more. Any help much appreciated!
+
 ## What Material Design Components are available?
 
 Please refer to the official [documentation](https://sveltematerialui.com/) to get an overview of all available components.
@@ -39,7 +41,7 @@ Changes to the default Material Design Theme are applied in `src/theme/_smui-the
 
 ## How to install additional Components?
 
-It's enough to install the corresponding NPM package if you are using the default theme. However: if you change colors (or whatever else) in "/src/theme" you have to run `npm run prepare` again in order for theme-colors to be applied to newly added components.
+It's enough to install the corresponding NPM package if you are using the default theme. However: if you change colors (or whatever else) in `/src/theme` you have to run `npm run prepare` again in order for theme-colors to be applied to newly added components.
 
 ## Available Icons
 
