@@ -10,11 +10,22 @@
 	import FormField from "@smui/form-field";
 	import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar";
 	import IconButton from "@smui/icon-button";
+	import MenuSurface from "@smui/menu-surface";
+	import Textfield from "@smui/textfield";
 
-	let checked = false;
+	let checked: boolean = false;
+	let surface: any;
+	let surfaceStatus: boolean = false;
+	let name: string = "";
+	let email: string = "";
+
+	function setSurfaceStatus() {
+		surfaceStatus = false;
+		console.log("closed");
+	}
 </script>
 
-<div class="wrapper">
+<div class="wrapper mdc-elevation--z10">
 	<div class="mdc-typography--headline1">Welcome!</div>
 	<h1>Vite + Routify + TypeScript + Svelte Material UI</h1>
 	<div class="wrapper-icons">
@@ -28,11 +39,17 @@
 	</div>
 	<div class="saperator" />
 	<div class="wrapper-ui-elements">
-		<div class="top-app-bar-container" style="margin-bottom: 1rem">
-			<TopAppBar color="primary" variant="static">
+		<div class="top-app-bar-container">
+			<TopAppBar color="primary" variant="static" style="margin-bottom: 1rem">
 				<Row>
 					<Section>
-						<IconButton class="material-icons">menu</IconButton>
+						<IconButton
+							on:click={() => {
+								surfaceStatus = !surfaceStatus;
+								surface.setOpen(surfaceStatus);
+							}}
+							class="material-icons">menu</IconButton
+						>
 						<Title>Menu</Title>
 					</Section>
 					<Section align="end" toolbar>
@@ -41,6 +58,17 @@
 						<IconButton class="material-icons" aria-label="Bookmark this page">bookmark</IconButton>
 					</Section>
 				</Row>
+				<div style="min-width: 200px">
+					<MenuSurface on:MDCMenuSurface:closed={setSurfaceStatus} bind:this={surface} anchorCorner="BOTTOM_LEFT">
+						<div style="margin: 1em; display: flex; flex-direction: column; align-items: flex-end;">
+							<Textfield bind:value={name} label="Name" />
+							<Textfield bind:value={email} label="Email" type="email" />
+							<Button variant="outlined" style="margin-top: 1rem">
+								<Label>Submit</Label>
+							</Button>
+						</div>
+					</MenuSurface>
+				</div>
 			</TopAppBar>
 		</div>
 
@@ -92,7 +120,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 1rem;
-		margin: 1rem 0rem;
+		margin: 2rem 1rem;
 		padding: 2rem;
 	}
 
