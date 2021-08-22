@@ -8,11 +8,10 @@
     "build": "routify -b & vite build",
     "serve": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "prepare": "npm run __vite-workaround && npm run __smui-theme-light && npm run __smui-theme-dark",
+    "prepare": "npm run __vite-workaround && npm run __smui-theme-light",
     "__dev-vite": "vite",
     "__vite-workaround": "node _helper/vite-workaround.js",
-    "__smui-theme-light": "smui-theme compile public/smui.css -i src/theme",
-    "__smui-theme-dark": "smui-theme compile public/smui-dark.css -i src/theme/dark"
+    "__smui-theme-light": "smui-theme compile public/smui.css -i src/theme"
   },
   "devDependencies": {
     "@material/theme": "^11.0.0",
