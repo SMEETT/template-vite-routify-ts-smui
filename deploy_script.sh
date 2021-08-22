@@ -1,5 +1,5 @@
-mkdir /var/lib/pm2node/SMUI_Demo
-cd /var/lib/pm2node/SMUI_Demo
+mkdir /var/lib/pm2node/SMUI_demo
+cd /var/lib/pm2node/SMUI_demo
 npm install --production=false
 npm run build
 npm run prepare
