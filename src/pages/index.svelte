@@ -18,11 +18,6 @@
 	let surfaceStatus: boolean = false;
 	let name: string = "";
 	let email: string = "";
-
-	function setSurfaceStatus() {
-		surfaceStatus = false;
-		console.log("closed");
-	}
 </script>
 
 <div class="wrapper mdc-elevation--z10">
@@ -59,11 +54,11 @@
 					</Section>
 				</Row>
 				<div style="min-width: 200px">
-					<MenuSurface on:MDCMenuSurface:closed={setSurfaceStatus} bind:this={surface} anchorCorner="BOTTOM_LEFT">
+					<MenuSurface on:MDCMenuSurface:closed={() => (surfaceStatus = false)} bind:this={surface} anchorCorner="TOP_LEFT">
 						<div style="margin: 1em; display: flex; flex-direction: column; align-items: flex-end;">
 							<Textfield bind:value={name} label="Name" />
 							<Textfield bind:value={email} label="Email" type="email" />
-							<Button variant="outlined" style="margin-top: 1rem">
+							<Button variant="unelevated" style="margin-top: 1rem">
 								<Label>Submit</Label>
 							</Button>
 						</div>
@@ -128,7 +123,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-		width: 70%;
+		width: 55%;
 		margin-bottom: 2rem;
 	}
 
