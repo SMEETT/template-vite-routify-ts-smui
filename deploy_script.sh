@@ -5,4 +5,4 @@ npm run build
 npm run prepare
 pm2 delete smui_demo
 pm2 restart ecosystem.config.js
-pm2 saves
+pm2 save
